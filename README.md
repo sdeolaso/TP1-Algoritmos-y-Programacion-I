@@ -5,4 +5,4 @@ uno con esferas de diferentes colores y otro utilizando los STLs incluídos en e
 
 Comandos a correr en terminal con GCC (o compilador equivalente):
 1. make
-2. TP1 
+2. ./TP1 
