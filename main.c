@@ -209,6 +209,7 @@ void computar_imagen(imagen_t *imagen, int profundidad, const arreglo_t *objetos
             imagen_set_pixel(imagen, vx, vy, aux);
         }
 
+        // Barra de porcentaje
         int porcentaje = 100 * vy/ancho;
         if(porcentaje >= porcentaje_anterior + 5)
         {
@@ -216,6 +217,7 @@ void computar_imagen(imagen_t *imagen, int profundidad, const arreglo_t *objetos
             porcentaje_anterior = porcentaje;
         }
     }
+    printf("100%%!\n\n");
 }
 
 void color_escribir_PPM(FILE *f, color_t c)
@@ -394,7 +396,6 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Formato de archivo no reconocido: %s\n", argv[4]);
         return 1;
     }
-    printf("100%%!\n\n");
     imagen_destruir(imagen);
     arreglo_destruir(luces, luz_destruir);
     arreglo_destruir(objetos, objeto_destruir);
